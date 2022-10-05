@@ -1,38 +1,139 @@
-.App {
+.homeWrap{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('./Assets/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.weatherSection{
+  display: flex;
+    border-radius: 25px;
+    box-shadow: 4px 6px 6px 7px rgb(0 0 0 / 10%);
+    color: #fff;
+    margin: 20px;
+    height: max-content;
+    background: rgba(0,0,0,0.1);
+    border: solid 2px #ffff;
+    padding: 0;
+}
+.leftWrap{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+    border-radius: 25px;
+    width: 300px;
+    transition: transform .3s ease;
+    transform: translateZ(0) scale(1.02) perspective(1000px);
+    background: #000e1b;
+    margin-right: 10px;
+    box-shadow: -1px 1px 9px 14px rgb(0 0 0 / 30%);
+}
+.rightSide{
+  color: #000;
+    position: relative;
+    float: left;
+    height: 100%;
+    padding-top: 25px;
+    padding-right: 20px;
+}
+.stateMenu{
+  outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    color: #000;
+    font-weight: 700;
+    box-shadow: 0 0 30px -5px #00000040;
+    cursor: pointer;
+    transition: transform .2s ease;
+    transition: transform .2s ease,-webkit-transform .2s ease;
+}
+
+.humidityWrap{
+  padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    margin-bottom: 20px;
+}
+.humidityWrap>* {
+  display: flex;
+  justify-content: space-between;
+}
+.humidityData + .humidityData {
+  margin-top: 10px;
+}
+
+.title{
+  font-weight: 700;
+}
+.cardWrap {
+  background: rgba(0,0,0,0.2);
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+.cardList {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.cardList::after, .cardList::before{
+  content: '';
+  overflow: hidden;
+  clear: both;
+  display: table;
+}
+.cardList > li {
+  float: left;
+  padding: 15px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+.day-icon {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin: 0 auto;
+}
+.day-name {
+  display: block;
+  margin: 10px 0 0;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.day-temp {
+  display: block;
+  text-align: center;
+  margin: 10px 0 0;
+  font-weight: 700;
+}
+.cardList > li.active{
+  background: #fff;
+  border-radius: 10px;
+}
+.cardList > li:hover{
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1.1);
+  box-shadow: 0 0 40px -5px #0003;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dateDay, .locationName {
+  display: block;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.locationName{
+  margin-top: 10px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weatherTemp {
+  margin: 0;
+  font-weight: 700;
+  font-size: 4em;
 }
