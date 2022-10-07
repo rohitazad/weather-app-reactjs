@@ -137,3 +137,28 @@
   font-weight: 700;
   font-size: 4em;
 }
+
+@media only screen and (max-width: 700px) {
+  .weatherSection, .homeWrap, .leftWrap, .rightSide{
+    display: block;
+    height: auto;
+    float:none;
+  }
+  .weatherSection{
+    margin:0;
+  }
+  .stateMenu{width: auto;}
+  .humidityWrap>*{
+    display: block;
+  }
+  .humidityData{overflow: hidden;}
+  .title{float: left;}
+  .value{float: right;}
+  .leftWrap{width: auto;margin:0 0 0 0;padding:20px;}
+  .homeWrap{
+    padding:40px 25px;
+  }
+  h2{margin: 0;}
+  .rightSide{padding-left:25px;}
+  .cardWrap{margin-top: 20px;padding-top:10px;padding-bottom:10px;}
+}
