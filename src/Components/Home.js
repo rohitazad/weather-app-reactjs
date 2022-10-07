@@ -3,7 +3,7 @@ import WeekInfoCardComponents from './WeekInfoCard';
 import ChooseStateComponents from './ChooseState';
 import HumidityComponents from './HUMIDITY';
 import LeftComponents from './Left';
-const HomeComponents = ()=>{
+const HomeComponents = ()=>{   
     return (
         <>
             <div className='homeWrap'>
